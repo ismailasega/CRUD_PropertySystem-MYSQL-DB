@@ -3,6 +3,22 @@
 $conn = mysqli_connect("localhost","Admin","");
 $db = mysqli_select_db($conn,'aismailapp');
 
+$string = file_get_contents("http://trialapi.craig.mtcdevserver.com/");
+        $json = json_decode($string, true);
+
+
+        foreach($json['rates'] as $date =>$conversion){
+            $sql = "INSERT INTO Mytable (id, date, conversion)
+                    VALUES ( '$date', ".$conversion['EUR'].")";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully"."<br>";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error."<br>";
+            }
+
+        }
+
 if(isset($_POST['apidata-add']))
 {
     $County = $_POST['County'];

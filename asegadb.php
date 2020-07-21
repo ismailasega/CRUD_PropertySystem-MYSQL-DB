@@ -31,7 +31,7 @@ if (!isset($_SESSION['loggedin'])) {
           
             <div class="card">
                 <div class=card-body>
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#getData">
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#fetchdata">
                         Fetch API Data
                     </button>
 
@@ -125,7 +125,13 @@ if (!isset($_SESSION['loggedin'])) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-
+<script>
+$(document).ready(function() {
+    $('#dbdatatable').DataTable( {
+        "scrollX": true
+    });
+});
+</script>
 <script>
 $(document).ready(function (){
     $('.delbtn').on('click', function(){
@@ -410,6 +416,30 @@ $(document).ready(function() {
         <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
             <button type="subimit" name="deletedata" class="btn btn-success">Proceed</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--Fetch APIData Property pop-up -->
+  <div class="modal fade" id="fetchdata" tabindex="-1" role="dialog" aria-labelledby="propertyDataLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="propertyDataLabel">Confirm Get Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <form action="apidatapost.php" method="POST">
+
+                <h4> Add/Update Property Data From API </h4>
+ 
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="subimit" name="fetchdata" class="btn btn-success">Fetch</button>
         </div>
         </form>
       </div>
