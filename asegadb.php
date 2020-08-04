@@ -234,7 +234,7 @@ $(document).ready(function() {
         <div class="form-row">
             <div class="form-group col-md-4">
             <label for="SelectNoofBedrooms">No. of bedrooms</label>
-            <select id="SelectNoofBedrooms" name="Noofbedrooms" type="text" class="form-control" required>
+            <select id="SelectNoofBedrooms" name="Numberofbedrooms" type="text" class="form-control" required>
                 <option selected>Select...</option>
                 <option>1</option>
                 <option>2</option>
@@ -245,7 +245,7 @@ $(document).ready(function() {
             </div>
             <div class="form-group col-md-4">
             <label for="SelectNoofBathrooms">No. of bathrooms</label>
-            <select id="SelectNoofBathrooms" name="Noofbathrooms" class="form-control" required>
+            <select id="SelectNoofBathrooms" name="Numberofbathrooms" class="form-control" required>
                 <option selected>Select...</option>
                 <option>1</option>
                 <option>2</option>
@@ -269,14 +269,14 @@ $(document).ready(function() {
                 <legend class="col-form-label col-sm-2 pt-0">For</legend>
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Rent" checked>
+                        <input class="form-check-input" type="radio" name="ForSale_ForRent" id="ForSale_ForRent3" value="Rent" checked>
                         <label class="form-check-label"  for="gridRadios1">
                             Rent
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Sale">
-                        <label class="form-check-label"  for="gridRadios1">
+                        <input class="form-check-input" type="radio" name="ForSale_ForRent" id="ForSale_ForRent4" value="Sale">
+                        <label class="form-check-label"  for="gridRadios2">
                             Sale
                         </label>
                     </div>
@@ -341,7 +341,7 @@ $(document).ready(function() {
         <div class="form-row">
             <div class="form-group col-md-4">
             <label for="SelectNo.ofBedrooms">No. of bedrooms</label>
-            <select class="form-control" name="Noofofbedrooms" id="Numberofbedrooms">
+            <select class="form-control" name="Numberofbedrooms" id="Numberofbedrooms">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -351,7 +351,7 @@ $(document).ready(function() {
             </div>
             <div class="form-group col-md-4">
                 <label for="SelectNo.ofBathrooms">No. of bathrooms</label>
-                <select name="Noofbathrooms" class="form-control" id="Numberofbathrooms">
+                <select name="Numberofbathrooms" class="form-control" id="Numberofbathrooms">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -374,13 +374,13 @@ $(document).ready(function() {
                 <legend class="col-form-label col-sm-2 pt-0">For</legend>
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Rent" checked>
+                        <input class="form-check-input" type="radio" name="ForSale_ForRent" id="ForSale_ForRent3" value="Rent" checked>
                         <label class="form-check-label"  for="gridRadios1">
                             Rent
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Sale">
+                        <input class="form-check-input" type="radio" name="ForSale_ForRent" id="ForSale_ForRent4" value="Sale">
                         <label class="form-check-label"  for="gridRadios2">
                             Sale
                         </label>
